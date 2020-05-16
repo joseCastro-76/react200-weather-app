@@ -1,9 +1,9 @@
 import React from 'react';
 
 import Header from './components/Header';
-import CitySelect from './components/CitySelect/CitySelect';
-import CityInfo from './components/CityInfo/CityInfo';
-import SearchHistory from './components/SeacrhHistory/SearchHistory';
+import CitySelect from './components/CitySelect';
+import CityInfo from './components/CityInfo';
+import SearchHistory from './components/SeacrhHistory';
 
 export default class App extends React.Component {
   render() {

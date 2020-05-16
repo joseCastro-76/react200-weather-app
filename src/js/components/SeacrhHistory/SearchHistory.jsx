@@ -1,6 +1,17 @@
 import React from 'react';
 
 function SearchHistory(props) {
+    const { searchHistory } = props;
+    
+    const list = searchHistory.reverse().map((search, index) => {
+        return (
+            <tr key={ index }>
+                <td>{ search.name }</td>
+                <td>{ search.date }</td>
+            </tr>
+        )
+    });
+
     return (
         <div className="card">
             <div className="card-header">
@@ -9,22 +20,7 @@ function SearchHistory(props) {
             <div className="card-body">
                 <table className="table table-striped">
                     <tbody>
-                        <tr>
-                            <td>San Diego</td>
-                            <td>04/28/2016</td>
-                        </tr>
-                        <tr>
-                            <td>New York</td>
-                            <td>04/28/2106</td>
-                        </tr>
-                        <tr>
-                            <td>Wahington D.C.</td>
-                            <td>04/28/2016</td>
-                        </tr>
-                        <tr>
-                            <td>London</td>
-                            <td>04/28/2016</td>
-                        </tr>
+                        { list }
                     </tbody>
                 </table>
             </div>
